@@ -36,5 +36,41 @@ int option = input.nextInt();
             }
     }
 }
+
+//register
     
+ public static void register(Scanner input){
+     System.out.println("\n********************");
+     System.out.println("Account Registration");
+     System.out.println("\n********************");
+     
+     AccountValidation obj = new AccountValidation();
+     boolean valid = false;
+     
+     while(!valid){
+      System.out.print("Please enter your name:");
+      valid = obj.name(input.nextLine());
+     }
+     valid  = false;
+     while(!valid){
+      System.out.print("Please enter your username (minimum 4 cahracters,must include an underscore):");
+      valid = obj.checkUsername(input.nextLine());
+     }
+     
+     valid  = false;
+     while(!valid){
+      System.out.print("Please enter your password (minimum 8 cahracters \n must include at least one number a capital letter \n and special character):");
+       valid = obj.checkPassword(input.nextLine());
+ }
+     valid  = false;
+     while(!valid){
+      System.out.print("Please enter your number (e.g. +27821234567):):");
+      valid = obj.checkCellPhoneNumber(input.nextLine());
+     }
+     
+     registeredAccount= obj;
+
+       System.out.println("\nRegistration successful! Please login.\n");
+       login(input);
+    }
 
