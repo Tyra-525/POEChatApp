@@ -35,7 +35,7 @@ int option = input.nextInt();
                 System.out.println("\nInvalid option. Please try again.\n");
             }
     }
-}
+
 
 //register
     
@@ -59,7 +59,7 @@ int option = input.nextInt();
      
      valid  = false;
      while(!valid){
-      System.out.print("Please enter your password (minimum 8 cahracters \n must include at least one number a capital letter \n and special character):");
+      System.out.print("Please enter your password (8+ chars, 1 number, 1 capital, 1 special char):");
        valid = obj.checkPassword(input.nextLine());
  }
      valid  = false;
@@ -117,6 +117,7 @@ int option = input.nextInt();
             System.out.println("\nYou've tried too many times. Please try again later.");
             System.exit(0);
         }
+    }
     }
 }
 
