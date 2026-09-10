@@ -9,7 +9,7 @@ package com.mycompany.poechatapp;
  * @author tyraz
  */
 public class AccountValidation {
-    public class AccountValidation {
+    
    public String name;
    public String username; 
    public String password;
@@ -34,3 +34,4 @@ return true;
 }
 
 }
+
